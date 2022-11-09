@@ -14,8 +14,6 @@ cross.addEventListener("click", () => {
     cross.classList.add("hidden");
 });
 
-
-
 let tabs = document.querySelectorAll('.tabs_toggle');
 let contents = document.querySelectorAll('.tabs_content');
 
