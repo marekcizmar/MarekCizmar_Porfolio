@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .nav {
+        @apply ease-in-out duration-200 hover:text-green-300;
+    }
+    .work {
+        @apply shadow-lg duration-200 hover:opacity-90;
+    }
+
+    #mobileNav > a {
+        @apply block text-base sm:text-lg text-white;
+    }
+
+    .tabs_toggle {
+        @apply px-6 py-3 hover:bg-gray-100 hover:text-green-600 cursor-pointer duration-200;
+    }
+
+    .tabs_toggle.is-active {
+        @apply bg-green-100 rounded-sm text-green-600;
+    }
+
+    .tabs_content {
+        @apply hidden;
+    }
+
+    .tabs_content.is-active {
+        @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10;
+    }
+
+}
+
+.animationIN {
+    animation : navbarIN .4s;
+}
+
+@keyframes navbarIN {
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
