@@ -1366,6 +1366,11 @@ select {
     padding-left: 3rem;
     padding-right: 3rem;
   }
+
+  .base\:px-5 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
 }
 
 @media (min-width: 640px) {
