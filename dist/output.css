@@ -1362,14 +1362,14 @@ select {
     justify-content: space-between;
   }
 
-  .base\:px-12 {
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
-
   .base\:px-5 {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
+  }
+
+  .base\:px-12 {
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 }
 
@@ -1420,11 +1420,6 @@ select {
 }
 
 @media (min-width: 768px) {
-  .md\:-mx-0 {
-    margin-left: -0px;
-    margin-right: -0px;
-  }
-
   .md\:mt-2 {
     margin-top: 0.5rem;
   }
@@ -1531,8 +1526,8 @@ select {
     margin-top: 0px;
   }
 
-  .lg\:mt-5 {
-    margin-top: 1.25rem;
+  .lg\:mt-3 {
+    margin-top: 0.75rem;
   }
 
   .lg\:mt-16 {
@@ -1545,10 +1540,6 @@ select {
 
   .lg\:ml-12 {
     margin-left: 3rem;
-  }
-
-  .lg\:mt-3 {
-    margin-top: 0.75rem;
   }
 
   .lg\:block {
@@ -1584,21 +1575,6 @@ select {
     padding-right: 7rem;
   }
 
-  .lg\:px-7 {
-    padding-left: 1.75rem;
-    padding-right: 1.75rem;
-  }
-
-  .lg\:px-40 {
-    padding-left: 10rem;
-    padding-right: 10rem;
-  }
-
-  .lg\:px-10 {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-  }
-
   .lg\:px-12 {
     padding-left: 3rem;
     padding-right: 3rem;
@@ -1607,6 +1583,16 @@ select {
   .lg\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .lg\:px-7 {
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+  }
+
+  .lg\:px-40 {
+    padding-left: 10rem;
+    padding-right: 10rem;
   }
 
   .lg\:pt-32 {
@@ -1643,10 +1629,6 @@ select {
 }
 
 @media (min-width: 1280px) {
-  .xl\:mt-10 {
-    margin-top: 2.5rem;
-  }
-
   .xl\:mt-6 {
     margin-top: 1.5rem;
   }
@@ -1655,9 +1637,10 @@ select {
     gap: 6rem;
   }
 
-  .xl\:px-7 {
-    padding-left: 1.75rem;
-    padding-right: 1.75rem;
+  .xl\:space-x-7 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1.75rem * var(--tw-space-x-reverse));
+    margin-left: calc(1.75rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .xl\:px-24 {
@@ -1665,19 +1648,19 @@ select {
     padding-right: 6rem;
   }
 
-  .xl\:py-20 {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+  .xl\:py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .xl\:px-7 {
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
   }
 
   .xl\:px-80 {
     padding-left: 20rem;
     padding-right: 20rem;
-  }
-
-  .xl\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
   }
 
   .xl\:text-4xl {
@@ -1690,18 +1673,19 @@ select {
     line-height: 2rem;
   }
 
-  .xl\:text-6xl {
-    font-size: 3.75rem;
+  .xl\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .xl\:text-5xl {
+    font-size: 3rem;
     line-height: 1;
   }
 
   .xl\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
-  }
-
-  .xl\:leading-extra-loose {
-    line-height: 3rem;
   }
 
   .xl\:leading-relaxed {
