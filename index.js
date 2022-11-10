@@ -1,17 +1,16 @@
 let button = document.getElementById("hamburger"),
     navigation = document.getElementById("mobileNav"),
-    cross = document.getElementById("xmark");
+    cross = document.getElementById("xmark"),
+    mainNav = document.getElementById("mainNav");
 
 button.addEventListener("click", () => {
+    mainNav.classList.add("hidden");
     navigation.classList.remove("hidden");
-    button.classList.add("hidden");
-    cross.classList.remove("hidden");
 });
 
 cross.addEventListener("click", () => {
+    mainNav.classList.remove("hidden");
     navigation.classList.add("hidden");
-    button.classList.remove("hidden");
-    cross.classList.add("hidden");
 });
 
 let tabs = document.querySelectorAll('.tabs_toggle');

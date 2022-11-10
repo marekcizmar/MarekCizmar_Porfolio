@@ -17,22 +17,28 @@
 <body class="font-poppins selection:bg-green-300 selection:text-green-900">
     <!--Navbar-->
     <header id="home" class="bg-emerald-700 transition-all ease-out duration-500 relative">
-        <div class="container mx-auto flex items-center justify-between py-5 px-5 md:px-20 lg:px-28 xl:px-7 2xl:px-20">  
-            <img src="img/white_logo.svg" alt="Logo" class="w-8 h-auto">
-            <button id="hamburger" class="inline-block lg:hidden text-white hover:text-emerald-100">
-                <i class="fa-solid fa-bars fa-xl"></i>
-            </button>
-            <button id="xmark" class="hidden text-white hover:text-emerald-100">
-                <i class="fa-solid fa-xmark fa-xl"></i>
-            </button>
-            <nav id="navlinks" class="hidden lg:flex py-2 sm:p-0 text-white font-light">
-                <a href="#" class="font-semibold relative">Home<div class="absolute w-full h-1 bg-white rounded-sm -bottom-7 cursor-default"></div></a>
-                <a href="#about" class="nav scroll ml-12">About</a>
-                <a href="#portfolio" class="nav scroll ml-12">Portfolio</a>
-                <a href="#contact" class="nav scroll ml-12">Contact</a>
-            </nav>
-        </div>
+        <nav class="absolute bg-emerald-700 w-full">
+            <div id="mainNav" class="container mx-auto flex items-center justify-between py-5 px-5 md:px-20 lg:px-28 xl:px-7 2xl:px-20 ">  
+                <img src="img/white_logo.svg" alt="Logo" class="w-8 h-auto">
+                <button id="hamburger" class="inline-block lg:hidden text-white hover:text-emerald-100">
+                    <i class="fa-solid fa-bars fa-xl"></i>
+                </button>
+                
+                <nav id="navlinks" class="hidden lg:flex py-2 sm:p-0 text-white font-light">
+                    <a href="#" class="font-semibold relative">Home<div class="absolute w-full h-1 bg-white rounded-sm -bottom-7 cursor-default"></div></a>
+                    <a href="#about" class="nav scroll ml-12">About</a>
+                    <a href="#portfolio" class="nav scroll ml-12">Portfolio</a>
+                    <a href="#contact" class="nav scroll ml-12">Contact</a>
+                </nav>
+            </div>
+        </nav>
         <nav id="mobileNav" class="absolute hidden bg-emerald-700 w-full text-center px-5 md:px-20 pb-4 space-y-4 shadow-xl animationIN">
+            <div class="container mx-auto flex items-center justify-between py-5 px-5">
+                <img src="img/white_logo.svg" alt="Logo" class="w-8 h-auto">
+                <button id="xmark" class="text-white hover:text-emerald-100">
+                    <i class="fa-solid fa-xmark fa-xl"></i>
+                </button>
+            </div>
             <a href="#about" class="scroll">About me</a>
             <a href="#portfolio" class="scroll">Portfolio</a>
             <a href="#contact" class="scroll">Contact</a>
@@ -43,15 +49,15 @@
         <!--Home-->
         <section class="bg-gradient-to-br from-gradient1 to-gradient2 text-white">
             <div class="container mx-auto px-5 md:px-20 lg:px-28 xl:px-7 2xl:px-20 py-16 md:py-44">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-20 lg:mt-0">
                     <div class="mx-auto md:-mx-0 my-auto text-center lg:text-left">
                         <h1 class="font-semibold text-3xl sm:text-4xl lg:text-3xl xl:text-5xl">Hello, I'm Marek.</h1>
                         <h1 class="text-xl sm:text-2xl lg:text-xl xl:text-4xl leading-normal xl:leading-extra-loose mt-1 md:mt-2">Graphic Designer, Web Designer, Web Developer & Illustrator</h1>
                         <h1 class="font-light text-lg sm:text-xl lg:text-lg xl:text-2xl mt-3 md:mt-4 tracking-wide">Marek Čižmár</h1>
                         <div class="mx-auto">
                             <div class="text-lg sm:text-xl md:text-2xl lg:text-lg flex justify-center lg:justify-start mt-4 md:mt-6">
-                                <a href="#portfolio" class="px-10 sm:px-14 py-3 mr-5 bg-white rounded-md text-emerald-700 ease-in-out duration-300 hover:bg-emerald-100 hover:text-emerald-900 scroll shadow-2xl">Work</a>
-                                <a href="#contact" class="px-6 sm:px-9 py-3 border-white border rounded-md ease-in-out duration-300 hover:bg-emerald-100 hover:text-emerald-700 scroll hover:shadow-2xl">Contact</a>
+                                <a href="#portfolio" class="px-9 sm:px-14 py-3 mr-5 bg-white rounded-md text-emerald-700 ease-in-out duration-300 hover:bg-emerald-100 hover:text-emerald-900 scroll shadow-2xl">Work</a>
+                                <a href="#contact" class="px-5 sm:px-9 py-3 border-white border rounded-md ease-in-out duration-300 hover:bg-emerald-100 hover:text-emerald-700 scroll hover:shadow-2xl">Contact</a>
                             </div>
                         </div>
                     </div>
@@ -66,7 +72,7 @@
         <section class="pt-16 lg:pt-32" id="about">
             <div class="container mx-auto px-10 md:px-20 lg:px-28 xl:px-7 2xl:px-20">
                 <h1 class="font-semibold text-3xl sm:text-4xl lg:text-3xl xl:text-5xl text-greenText text-center lg:text-left">About me</h1>
-                <p class="font-light text-sm sm:text-base md:text-xl lg:text-lg xl:text-2xl mt-4 md:mt-6 xl:leading-relaxed text-center lg:text-left">Hey, I'm Marek. I'm a freelancer based in Slovakia and I specialise in web development and design.</p>
+                <p class="font-light text-sm sm:text-base md:text-xl lg:text-lg xl:text-2xl mt-4 md:mt-6 lg:mt-3 xl:mt-6 xl:leading-relaxed text-center lg:text-left">Hey, I'm Marek. I'm a freelancer based in Slovakia and I specialise in web development and design.</p>
                 <p class="font-light text-sm sm:text-base md:text-xl lg:text-lg xl:text-2xl lg:w-3/4 xl:leading-relaxed text-center lg:text-left">In my 5 years of experience with Graphics and Illustrations, I've completed more than 200 commissions with an average rating of 4,5 stars out of 5.</p>
                 <div class="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-10 xl:gap-24 text-white px-6 base:px-12 sm:px-36 lg:px-7 xl:px-24">
 
@@ -148,7 +154,7 @@
 
                 <!--Button-->
                 <div class="block text-center mt-12">
-                    <a href="./portfolio.html" class="px-10 sm:px-14 py-4 bg-greenText rounded-md text-lg sm:text-xl md:text-2xl lg:text-lg text-white shadow-xl ease-in-out duration-300 hover:bg-emerald-700 inline-block" target="_blank">View more</a>
+                    <a href="./portfolio.html" class="px-9 sm:px-14 py-3 bg-greenText rounded-md text-lg sm:text-xl md:text-2xl lg:text-lg text-white shadow-xl ease-in-out duration-300 hover:bg-emerald-700 inline-block" target="_blank">View more</a>
                 </div>
             </div>
         </section>
@@ -165,23 +171,23 @@
 
                         <!--Your name-->
                         <label for="name">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your name" required class="mt-3 block w-full px-2 md:px-4 py-3 md:py-4 rounded border-greenText focus:ring-greenText text-greenText placeholder:text-greenText font-light">
+                        <input type="text" id="name" name="name" placeholder="Your name" required class="mt-3 block w-full text-sm px-2 md:px-4 py-3 md:py-4 rounded border-greenText focus:ring-greenText text-greenText placeholder:text-greenText font-light">
                         
                         <!--Your email-->
                         <div class="mt-5">
                             <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="youremail@example.com" required class="mt-3 block w-full px-2 md:px-4 py-3 md:py-4 rounded border-greenText focus:ring-greenText text-greenText placeholder:text-greenText font-light">
+                            <input type="email" id="email" name="email" placeholder="youremail@example.com" required class="mt-3 block w-full text-sm px-2 md:px-4 py-3 md:py-4 rounded border-greenText focus:ring-greenText text-greenText placeholder:text-greenText font-light">
                         </div>
 
                         <!--Your message-->
                         <div class="mt-5">
                             <label for="message">Message</label>
-                            <textarea id="message" rows="5" name="message" placeholder="Your message" required class="mt-3 block w-full px-2 md:px-4 py-3 md:py-4 rounded border-greenText focus:ring-greenText text-greenText placeholder:text-greenText font-light"></textarea>
+                            <textarea id="message" rows="5" name="message" placeholder="Your message" required class="mt-3 block w-full text-sm px-2 md:px-4 py-3 md:py-4 rounded border-greenText focus:ring-greenText text-greenText placeholder:text-greenText font-light"></textarea>
                         </div>
 
                         <!--Submit button-->
                         <div class="block text-center mt-8 font-normal">
-                           <button type="submit" class="px-10 sm:px-14 py-4 bg-greenText rounded-md text-lg sm:text-xl md:text-2xl lg:text-lg text-white shadow-lg ease-in-out duration-300 hover:bg-emerald-700 inline-block">Submit</button> 
+                           <button type="submit" class="px-9 sm:px-14 py-3 bg-greenText rounded-md text-lg sm:text-xl md:text-2xl lg:text-lg text-white shadow-lg ease-in-out duration-300 hover:bg-emerald-700 inline-block">Submit</button> 
                         </div>
                     </form>
                 </div>
@@ -234,7 +240,7 @@
                 // Add hash (#) to URL when done scrolling (default click behavior)
                 window.location.hash = hash;
                 });
-                }// End if
+                }
             });
         });
     </script>

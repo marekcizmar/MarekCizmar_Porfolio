@@ -835,6 +835,14 @@ select {
   margin-bottom: auto;
 }
 
+.ml-12 {
+  margin-left: 3rem;
+}
+
+.mt-20 {
+  margin-top: 5rem;
+}
+
 .mt-1 {
   margin-top: 0.25rem;
 }
@@ -879,10 +887,6 @@ select {
   margin-top: 1.25rem;
 }
 
-.ml-12 {
-  margin-left: 3rem;
-}
-
 .block {
   display: block;
 }
@@ -915,12 +919,12 @@ select {
   height: 100vh;
 }
 
-.w-8 {
-  width: 2rem;
-}
-
 .w-full {
   width: 100%;
+}
+
+.w-8 {
+  width: 2rem;
 }
 
 .w-4\/5 {
@@ -1074,14 +1078,19 @@ select {
   padding-bottom: 4rem;
 }
 
-.px-10 {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
+.px-9 {
+  padding-left: 2.25rem;
+  padding-right: 2.25rem;
 }
 
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+}
+
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 }
 
 .px-6 {
@@ -1094,11 +1103,6 @@ select {
   padding-bottom: 3.5rem;
 }
 
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -1107,10 +1111,6 @@ select {
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-}
-
-.pl-16 {
-  padding-left: 4rem;
 }
 
 .pb-4 {
@@ -1412,11 +1412,6 @@ select {
     font-size: 1.875rem;
     line-height: 2.25rem;
   }
-
-  .sm\:text-lg {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
 }
 
 @media (min-width: 768px) {
@@ -1439,10 +1434,6 @@ select {
 
   .md\:mt-20 {
     margin-top: 5rem;
-  }
-
-  .md\:ml-5 {
-    margin-left: 1.25rem;
   }
 
   .md\:block {
@@ -1531,6 +1522,14 @@ select {
     margin: 0px;
   }
 
+  .lg\:mt-0 {
+    margin-top: 0px;
+  }
+
+  .lg\:mt-5 {
+    margin-top: 1.25rem;
+  }
+
   .lg\:mt-16 {
     margin-top: 4rem;
   }
@@ -1541,6 +1540,10 @@ select {
 
   .lg\:ml-12 {
     margin-left: 3rem;
+  }
+
+  .lg\:mt-3 {
+    margin-top: 0.75rem;
   }
 
   .lg\:block {
@@ -1569,14 +1572,6 @@ select {
 
   .lg\:justify-start {
     justify-content: flex-start;
-  }
-
-  .lg\:gap-8 {
-    gap: 2rem;
-  }
-
-  .lg\:gap-7 {
-    gap: 1.75rem;
   }
 
   .lg\:px-28 {
@@ -1628,6 +1623,14 @@ select {
 }
 
 @media (min-width: 1280px) {
+  .xl\:mt-10 {
+    margin-top: 2.5rem;
+  }
+
+  .xl\:mt-6 {
+    margin-top: 1.5rem;
+  }
+
   .xl\:gap-24 {
     gap: 6rem;
   }
