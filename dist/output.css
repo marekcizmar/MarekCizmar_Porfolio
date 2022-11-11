@@ -1378,6 +1378,11 @@ select {
     padding: 0px;
   }
 
+  .sm\:px-32 {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+
   .sm\:px-14 {
     padding-left: 3.5rem;
     padding-right: 3.5rem;
@@ -1391,6 +1396,16 @@ select {
   .sm\:px-36 {
     padding-left: 9rem;
     padding-right: 9rem;
+  }
+
+  .sm\:px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .sm\:px-20 {
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 
   .sm\:text-4xl {
@@ -1554,10 +1569,6 @@ select {
     display: none;
   }
 
-  .lg\:w-3\/4 {
-    width: 75%;
-  }
-
   .lg\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1653,11 +1664,6 @@ select {
     padding-bottom: 4rem;
   }
 
-  .xl\:px-7 {
-    padding-left: 1.75rem;
-    padding-right: 1.75rem;
-  }
-
   .xl\:px-80 {
     padding-left: 20rem;
     padding-right: 20rem;
@@ -1678,11 +1684,6 @@ select {
     line-height: 1.75rem;
   }
 
-  .xl\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
-  }
-
   .xl\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
@@ -1694,6 +1695,10 @@ select {
 }
 
 @media (min-width: 1536px) {
+  .\32xl\:w-3\/4 {
+    width: 75%;
+  }
+
   .\32xl\:px-20 {
     padding-left: 5rem;
     padding-right: 5rem;
