@@ -1784,8 +1784,22 @@ select {
     width: 75%;
   }
 
+  .\32xl\:w-1\/2 {
+    width: 50%;
+  }
+
   .\32xl\:px-20 {
     padding-left: 5rem;
     padding-right: 5rem;
+  }
+
+  .\32xl\:px-32 {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+
+  .\32xl\:px-36 {
+    padding-left: 9rem;
+    padding-right: 9rem;
   }
 }
