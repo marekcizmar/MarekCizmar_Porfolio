@@ -16,11 +16,11 @@
 </head>
 <body class="font-poppins selection:bg-green-300 selection:text-green-900">
     <!--Navbar-->
-    <header id="home" class="bg-emerald-700 transition-all ease-out duration-500 relative">
-        <nav class="absolute bg-emerald-700 w-full">
+    <header id="home" class="bg-emerald-700">
+        <nav class="bg-emerald-700 w-full">
             <div id="mainNav" class="container mx-auto flex items-center justify-between py-5 px-5 sm:px-20 lg:px-28 2xl:px-32">  
                 <img src="img/white_logo.svg" alt="Logo" class="w-8 h-auto">
-                <button id="hamburger" class="inline-block lg:hidden text-white hover:text-emerald-100">
+                <button id="hamburger" class="inline-block lg:hidden text-white hover:text-emerald-100" onclick="openDropDown()">
                     <i class="fa-solid fa-bars fa-xl"></i>
                 </button>
                 
@@ -32,24 +32,18 @@
                 </nav>
             </div>
         </nav>
-        <nav id="mobileNav" class="absolute hidden bg-emerald-700 w-full text-center px-5 md:px-20 pb-4 space-y-4 shadow-xl animationIN">
-            <div class="container mx-auto flex items-center justify-between py-5 base:px-5">
-                <img src="img/white_logo.svg" alt="Logo" class="w-8 h-auto">
-                <button id="xmark" class="text-white hover:text-emerald-100">
-                    <i class="fa-solid fa-xmark fa-xl"></i>
-                </button>
-            </div>
+        <nav id="mobileNav" class="transition bg-emerald-700 w-full text-center px-5 md:px-20 space-y-4 origin-top scale-y-0 max-h-0 h-full"> 
             <a href="#about" class="scroll">About me</a>
             <a href="#portfolio" class="scroll">Portfolio</a>
-            <a href="#contact" class="scroll">Contact</a>
+            <a href="#contact" class="scroll pb-4">Contact</a>
         </nav>
+    
     </header>
-
     <main>
         <!--Home-->
         <section class="bg-gradient-to-br from-gradient1 to-gradient2 text-white">
             <div class="container mx-auto px-5 sm:px-20 lg:px-28 2xl:px-32 py-16 md:py-28 lg:py-44">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-20 lg:mt-0">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
                     <div class="mx-auto my-auto text-center lg:text-left">
                         <h1 class="font-semibold text-3xl sm:text-4xl lg:text-3xl xl:text-4xl">Hello, I'm Marek.</h1>
                         <h1 class="text-xl sm:text-2xl lg:text-xl xl:text-2xl leading-normal xl:leading-relaxed mt-1 md:mt-2">Graphic Designer, Web Designer, Web Developer & Illustrator</h1>

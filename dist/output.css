@@ -839,10 +839,6 @@ select {
   margin-left: 3rem;
 }
 
-.mt-20 {
-  margin-top: 5rem;
-}
-
 .mt-1 {
   margin-top: 0.25rem;
 }
@@ -867,8 +863,8 @@ select {
   margin-top: 0.5rem;
 }
 
-.ml-2 {
-  margin-left: 0.5rem;
+.ml-1 {
+  margin-left: 0.25rem;
 }
 
 .mt-8 {
@@ -885,10 +881,6 @@ select {
 
 .mt-5 {
   margin-top: 1.25rem;
-}
-
-.ml-1 {
-  margin-left: 0.25rem;
 }
 
 .block {
@@ -919,8 +911,16 @@ select {
   height: 0.25rem;
 }
 
+.h-full {
+  height: 100%;
+}
+
 .h-screen {
   height: 100vh;
+}
+
+.max-h-0 {
+  max-height: 0px;
 }
 
 .w-full {
@@ -935,8 +935,13 @@ select {
   width: 80%;
 }
 
-.w-1\/12 {
-  width: 8.333333%;
+.origin-top {
+  transform-origin: top;
+}
+
+.scale-y-0 {
+  --tw-scale-y: 0;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .cursor-default {
@@ -1052,10 +1057,6 @@ select {
 
 .to-gradient2 {
   --tw-gradient-to: #51B0C4;
-}
-
-.fill-current {
-  fill: currentColor;
 }
 
 .p-12 {
@@ -1203,12 +1204,6 @@ select {
   color: rgb(107 114 128 / var(--tw-text-opacity));
 }
 
-.shadow-xl {
-  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
 .shadow-2xl {
   --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
   --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
@@ -1221,39 +1216,65 @@ select {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.transition-all {
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
+.shadow-xl {
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.duration-500 {
-  transition-duration: 500ms;
+.transition {
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 .duration-300 {
   transition-duration: 300ms;
 }
 
-.ease-out {
-  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+.duration-500 {
+  transition-duration: 500ms;
 }
 
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.animationIN {
-  animation : navbarIN .4s;
+.dropdown-open {
+  animation: open 0.3s ease-in-out forwards;
 }
 
-@keyframes navbarIN {
-  0%{
-    transform: translateY(-100%);
+.dropdown-close {
+  animation: close 0.3s ease-in-out forwards;
+}
+
+@keyframes open {
+  0% {
+    transform: scaleY(0);
+    max-height: 0;
+    opacity: 0;
   }
 
-  100%{
-    transform: translateY(0%);
+  100% {
+    transform: scaleY(1);
+    max-height: 10rem;
+    opacity: 1;
+  }
+}
+
+@keyframes close {
+  0% {
+    transform: scaleY(1);
+    max-height: 10rem;
+    opacity: 1;
+  }
+
+  100% {
+    transform: scaleY(0);
+    max-height: 0;
+    opacity: 0;
   }
 }
 
@@ -1366,11 +1387,6 @@ select {
     justify-content: space-between;
   }
 
-  .base\:px-5 {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
-
   .base\:px-12 {
     padding-left: 3rem;
     padding-right: 3rem;
@@ -1386,9 +1402,9 @@ select {
     padding: 0px;
   }
 
-  .sm\:px-32 {
-    padding-left: 8rem;
-    padding-right: 8rem;
+  .sm\:px-20 {
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 
   .sm\:px-14 {
@@ -1401,39 +1417,19 @@ select {
     padding-right: 2.25rem;
   }
 
-  .sm\:px-36 {
-    padding-left: 9rem;
-    padding-right: 9rem;
-  }
-
-  .sm\:px-16 {
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-
-  .sm\:px-20 {
-    padding-left: 5rem;
-    padding-right: 5rem;
-  }
-
-  .sm\:px-44 {
-    padding-left: 11rem;
-    padding-right: 11rem;
-  }
-
-  .sm\:px-40 {
-    padding-left: 10rem;
-    padding-right: 10rem;
-  }
-
-  .sm\:px-24 {
-    padding-left: 6rem;
-    padding-right: 6rem;
+  .sm\:px-32 {
+    padding-left: 8rem;
+    padding-right: 8rem;
   }
 
   .sm\:px-28 {
     padding-left: 7rem;
     padding-right: 7rem;
+  }
+
+  .sm\:px-40 {
+    padding-left: 10rem;
+    padding-right: 10rem;
   }
 
   .sm\:text-4xl {
@@ -1451,9 +1447,9 @@ select {
     line-height: 1.75rem;
   }
 
-  .sm\:text-base {
-    font-size: 1rem;
-    line-height: 1.5rem;
+  .sm\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 
   .sm\:text-3xl {
@@ -1461,9 +1457,9 @@ select {
     line-height: 2.25rem;
   }
 
-  .sm\:text-lg {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
+  .sm\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -1504,34 +1500,16 @@ select {
     gap: 2.5rem;
   }
 
-  .md\:space-x-10 > :not([hidden]) ~ :not([hidden]) {
+  .md\:space-x-7 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
-    margin-right: calc(2.5rem * var(--tw-space-x-reverse));
-    margin-left: calc(2.5rem * calc(1 - var(--tw-space-x-reverse)));
+    margin-right: calc(1.75rem * var(--tw-space-x-reverse));
+    margin-left: calc(1.75rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .md\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-y-reverse: 0;
     margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(0px * var(--tw-space-y-reverse));
-  }
-
-  .md\:space-x-8 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-x-reverse: 0;
-    margin-right: calc(2rem * var(--tw-space-x-reverse));
-    margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
-  }
-
-  .md\:space-x-6 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-x-reverse: 0;
-    margin-right: calc(1.5rem * var(--tw-space-x-reverse));
-    margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
-  }
-
-  .md\:space-x-7 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-x-reverse: 0;
-    margin-right: calc(1.75rem * var(--tw-space-x-reverse));
-    margin-left: calc(1.75rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .md\:p-24 {
@@ -1543,9 +1521,14 @@ select {
     padding-right: 5rem;
   }
 
-  .md\:py-44 {
-    padding-top: 11rem;
-    padding-bottom: 11rem;
+  .md\:py-28 {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+
+  .md\:px-44 {
+    padding-left: 11rem;
+    padding-right: 11rem;
   }
 
   .md\:px-10 {
@@ -1563,41 +1546,6 @@ select {
     padding-bottom: 1rem;
   }
 
-  .md\:px-40 {
-    padding-left: 10rem;
-    padding-right: 10rem;
-  }
-
-  .md\:px-44 {
-    padding-left: 11rem;
-    padding-right: 11rem;
-  }
-
-  .md\:py-32 {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
-  }
-
-  .md\:py-28 {
-    padding-top: 7rem;
-    padding-bottom: 7rem;
-  }
-
-  .md\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-
-  .md\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-
-  .md\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
-  }
-
   .md\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
@@ -1613,12 +1561,12 @@ select {
     margin: 0px;
   }
 
-  .lg\:mt-0 {
-    margin-top: 0px;
-  }
-
   .lg\:mt-3 {
     margin-top: 0.75rem;
+  }
+
+  .lg\:mt-4 {
+    margin-top: 1rem;
   }
 
   .lg\:mt-16 {
@@ -1631,10 +1579,6 @@ select {
 
   .lg\:ml-12 {
     margin-left: 3rem;
-  }
-
-  .lg\:mt-4 {
-    margin-top: 1rem;
   }
 
   .lg\:block {
@@ -1666,6 +1610,11 @@ select {
     padding-right: 7rem;
   }
 
+  .lg\:py-44 {
+    padding-top: 11rem;
+    padding-bottom: 11rem;
+  }
+
   .lg\:px-12 {
     padding-left: 3rem;
     padding-right: 3rem;
@@ -1684,11 +1633,6 @@ select {
   .lg\:px-40 {
     padding-left: 10rem;
     padding-right: 10rem;
-  }
-
-  .lg\:py-44 {
-    padding-top: 11rem;
-    padding-bottom: 11rem;
   }
 
   .lg\:pt-32 {
@@ -1731,12 +1675,6 @@ select {
 
   .xl\:gap-24 {
     gap: 6rem;
-  }
-
-  .xl\:space-x-7 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-x-reverse: 0;
-    margin-right: calc(1.75rem * var(--tw-space-x-reverse));
-    margin-left: calc(1.75rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .xl\:px-24 {
@@ -1784,22 +1722,13 @@ select {
     width: 75%;
   }
 
-  .\32xl\:w-1\/2 {
-    width: 50%;
-  }
-
-  .\32xl\:px-20 {
-    padding-left: 5rem;
-    padding-right: 5rem;
-  }
-
   .\32xl\:px-32 {
     padding-left: 8rem;
     padding-right: 8rem;
   }
 
-  .\32xl\:px-36 {
-    padding-left: 9rem;
-    padding-right: 9rem;
+  .\32xl\:px-20 {
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 }
